@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    // 1. Create Integer number and add a pointer to it
+    int number = 10;
+    int *ptr = &number;
+
+    // 2. Add a pointer to the pointer
+    int **doublePtr = &ptr;
+
+    // 3. Print the value using both pointers
+    printf("Using pointer: %d\n", *ptr);
+    printf("Using double pointer: %d\n", **doublePtr);
+
+    return 0;
+}
