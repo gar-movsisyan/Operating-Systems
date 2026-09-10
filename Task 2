@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() {
+    // 1. Create the array numbers
+    int numbers[5] = {10, 20, 30, 40, 50};
+
+    // Pointer to the first element of the array
+    int *ptr = numbers;
+
+    // 2. Traverse and print using the pointer
+    printf("Original array:\n");
+
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", *(ptr + i));
+    }
+
+    // 3. Modify values using pointer
+    for (int i = 0; i < 5; i++) {
+        *(ptr + i) = *(ptr + i) + 5;
+    }
+
+    // 4. Print modified array with the help of pointer
+    printf("\n\nUsing pointer:\n");
+
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", *(ptr + i));
+    }
+
+    // Print modified array using array name
+    printf("\nUsing array name:\n");
+
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", numbers[i]);
+    }
+
+    return 0;
+}
