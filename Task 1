@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    // 1. This line declares and initializes the integer number
+    int number = 10;
+
+    // 2. Create a pointer that points to the number
+    int *ptr = &number;
+
+    // 3. Print the address using the variable and the pointer
+    printf("Address using &number: %p\n", (void *)&number);
+    printf("Address stored in ptr: %p\n", (void *)ptr);
+
+    // 4. Modify the integer using the pointer
+    *ptr = 25;
+
+    printf("New value of number: %d\n", number);
+
+    return 0;
+}
