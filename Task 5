@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    // 1. Create a string
+    char str[] = "Hello";
+
+    // 2. Pointer to the first character
+    char *ptr = str;
+
+    // 3. Print using the pointer
+    printf("String: ");
+
+    while (*ptr != '\0') {
+        printf("%c", *ptr);
+        ptr++;
+    }
+
+    // Reset pointer to the beginning
+    ptr = str;
+
+    // 4. Count characters using pointer arithmetic
+    int count = 0;
+
+    while (*ptr != '\0') {
+        count++;
+        ptr++;
+    }
+
+    printf("\nNumber of characters: %d\n", count);
+
+    return 0;
+}
